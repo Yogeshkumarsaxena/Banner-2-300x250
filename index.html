@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width = device-width, intial-scale=1">
+	<title>NAB 300x250</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/plugins/CSSPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/easing/EasePack.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.17.0/TweenLite.min.js"></script>
+	<script >
+		function init(){
+			frame1animation()
+		}
+		function cta(){
+			window.open("https://www.google.com","_blank")
+		}
+		function frame1animation(){
+			TweenLite.set(".frame3",{ x: 300, opacity:1, delay:0})
+			TweenLite.set(".frame4",{ x: 300, opacity:1, delay:0})
+			TweenLite.set(".sunglasses-emoji2",{ x: 100, y:100})
+
+			TweenLite.set([".bg",".logo"],{opacity:1})
+			TweenLite.set([".dollar",".zero",".donut",".credit-card",".sunglasses-emoji",".money-bag",".ticket",".bento",".raised-hands",".dress",".burger",".mic",".iphone",".high-heel",".guitar",".party-horn",".text-monthly",".text-accountfee"], { scale:0})
+			TweenLite.to( ".frame1" , { x: 0, opacity: 1, delay: 0 })
+
+			TweenLite.to(".zero", 0.5, { scale: 1, opacity: 1, ease:Bounce.easeOut, delay: 0.5})
+			TweenLite.to(".dollar", 0.5, { scale:1,opacity: 1, ease:Bounce.easeOut, delay: 0.7})
+
+			TweenLite.to(".donut", 0.5, { scale:1, opacity: 1, ease:Back.easeOut, delay: 0.9})
+			TweenLite.to(".credit-card", 0.5, { scale:1, opacity: 1, ease:Back.easeOut, delay: 1.1})
+			TweenLite.to(".money-bag", 0.6, { scale:1, opacity:1, ease:Back.easeOut, delay: 1.3})
+			TweenLite.to(".sunglasses-emoji", 0.3, { scale:1, opacity:1, ease:Back.easeOut, delay:1.5})
+
+			TweenLite.to(".ticket", 0.3, { scale:1, opacity:1, ease:Back.easeOut, delay:1.7})
+			TweenLite.to(".bento", 0.3, { scale:1, opacity:1, ease:Back.easeOut, delay:1.9})
+			TweenLite.to(".raised-hands", 0.3, { scale:1, opacity:1, ease:Back.easeOut, delay: 2.1})
+			TweenLite.to(".dress", 0.2, { scale:1, opacity:1, ease:Back.easeOut, delay: 2.3})
+			TweenLite.to(".burger", 0.2, { scale:1, opacity:1, ease:Back.easeOut, delay: 2.5})
+			TweenLite.to(".mic", 0.2, { scale:1, opacity:1, ease:Back.easeOut, delay: 2.7})
+			TweenLite.to(".laughing-emoji", 0.2, { scale:1, opacity:1, ease:Back.easeOut, delay: 2.9})
+			TweenLite.to(".iphone", 0.2, { scale:1, opacity:1, ease:Back.easeOut, delay: 3.1})
+
+			TweenLite.to(".high-heel", 0.1, { scale:1, opacity:1, ease:Back.easeOut, delay: 3.3})			
+			TweenLite.to(".guitar", 0.1, { scale:1, opacity:1, ease:Back.easeOut, delay: 3.5})
+			TweenLite.to(".party-horn", 0.1, { scale:1, opacity:1, ease:Back.easeOut, delay: 3.7})
+			TweenLite.delayedCall(4.7, frame2animaton)
+		}
+		function frame2animaton(){
+			TweenLite.to(".frame1", 0.2, { x: -32, ease:Power0.easeInOut, delay:0})
+			TweenLite.to(".text-monthly", 0.5, { scale:1, opacity: 1, ease:Back.easeOut, delay:0})
+			TweenLite.to(".text-accountfee", 0.5,{ scale:1, opacity:1, ease:Back.easeOut, delay:0})
+			TweenLite.to([".frame1",".frame2"], 0.3, { x:-300, ease:Power0.easeInOut, delay:2.5})
+			TweenLite.delayedCall( 2.5, frame3animation)
+		}
+		function frame3animation(){
+			
+			TweenLite.to(".frame3", 0.3, { x: 0, opacity:1, ease:Power0.easeInOut, delay:0})
+			TweenLite.to([".text-enjoy",".text-zero-monthly",".party-horn1"],0 ,{ opacity:1})
+			TweenLite.delayedCall( 2.5, frame4animation)
+		}
+		function frame4animation(){
+			TweenLite.to(".frame3", 0.3, { x:-300, ease:Power0.easeInOut, delay:0})
+			TweenLite.to(".frame4", 0.3, { x: 0, opacity:1, ease:Power0.easeInOut, delay:0})
+			TweenLite.to([".visa-card",".text-paybetter",".black-button",".text-applyonline"], 0,{ opacity:1})
+			TweenLite.to(".sunglasses-emoji2", 0.4, {scale:1, opacity:1,x:0 ,y:0, ease:Back.easeOut, delay: 1})
+		}
+	</script>
+	<style>
+		body{ margin: 0; padding:0; }
+		.ad{ position:relative; top:0; left:0; height: 250px; width:300px; box-sizing: border-box; overflow: hidden; border:1px solid lightgrey; background-color: lightgrey}
+		.bg{ position: absolute; top: 0; left: 0; opacity: 0;  }
+		.logo{ position: absolute; top: -1px; left: 250px; opacity: 0; z-index: 999;}
+
+		.frame1{ position: absolute; top:0; left: 0;}
+		.frame2,.frame3,.frame4{ position: absolute; top:0; left: 0; height: 250px; width: 300px; }
+		
+		.dollar{ position: absolute; top: 43px; left: 45px; opacity: 0; }
+		.zero{ position: absolute; top: 45px; left: 88px; opacity: 0;  }
+		.donut{ position: absolute; top: 35px; left: 136px; opacity: 0;}
+		.sunglasses-emoji{ position: absolute; top: 70px; left: 83px; opacity: 0; }
+		.credit-card{ position: absolute; top: 104px; left: 180px; opacity: 0; }
+		.money-bag{ position: absolute; top: 167px; left: 91px; opacity: 0; }
+		.bento{ position: absolute; top: 186px; left: 150px; opacity: 0; }
+		.burger{ position: absolute; top: 69px; left: 170px; opacity: 0; }
+		.dress{ position: absolute; top: 77px; left: 107px; opacity: 0; }
+		.guitar{ position: absolute; top: 139px; left: 113px; opacity: 0; }
+		.high-heel{ position : absolute; top: 175px; left: 178px; opacity: 0; }
+		.iphone { position: absolute; top: 136px; left: 187px; opacity: 0; }
+		.laughing-emoji { position: absolute; top: 70px; left: 196px; opacity: 0; }
+		.mic { position: absolute; top: 153px; left: 83px; opacity: 0; }
+		.party-horn{ position: absolute; top: 20px; left: 161px; opacity: 0; }
+		.raised-hands{ position: absolute; top: 103px; left: 69px; opacity: 0; }
+		.ticket{ position: absolute; top: 42px; left: 104px; opacity: 0; }
+
+		.text-monthly{ position: absolute; top: 87px; left: 200px; opacity: 0; }
+		.text-accountfee{ position: absolute; top: 123px; left: 200px; opacity: 0; }
+
+		.text-enjoy{ position: absolute; top: 110px; left: 23px;  opacity: 0;}
+		.party-horn1{ position: absolute; top: 5px; left: 15px; opacity: 0; }
+		.text-zero-monthly{ position: absolute; top: 0px; left:0px; opacity: 0; }
+
+		.visa-card{ position: absolute; top: 23px; left: 20px; opacity: 0; }
+		.text-paybetter{ position: absolute; top: 89px ; left: 20px; opacity: 0; }
+		.black-button{ position: absolute; top: 177px; left: 20px; opacity: 0; }
+		.text-applyonline{ position: absolute; top: 190px; left: 40px; opacity: 0; }
+		.sunglasses-emoji2{ position: absolute; top: 186px; left: 231px; opacity: 0; }
+
+	</style>
+</head>
+
+<body onload="init()" >
+	<div class="ad" onclick="cta()">
+		<img class="bg" src="image/bg.jpg" />
+		<img class="logo" src="image/nab-logo.png" />
+		<div class="frame1">
+			<img class="dollar" src="image/dollar.png" />
+			<img class="zero" src="image/zero.png" />
+			<img class="donut" src="image/donut.png" />
+			<img class="sunglasses-emoji" src="image/sunglasses-moji.png"/>
+			<img class="credit-card" src="image/credit-card.png" />
+			<img class="money-bag" src="image/money-bag.png" />
+			<img class="bento" src="image/bento.png" />
+			<img class="burger" src="image/burger.png" />
+			<img class="dress" src="image/dress.png" />
+			<img class="guitar" src="image/guitar.png" />
+			<img class="high-heel" src="image/high-heel.png" />
+			<img class="iphone" src="image/iphone.png" />
+			<img class="laughing-emoji" src="image/laughing-emoji.png" />
+			<img class="mic" src="image/mic.png" />
+			<img class="party-horn" src="image/party-horn.png" />
+			<img class="raised-hands" src="image/raised-hands.png" />
+			<img class="ticket" src="image/ticket.png" />
+ 		</div>
+
+ 		<div class="frame2">
+ 			
+ 			<img class="text-monthly" src="image/text-monthly.png" />
+ 			<img class="text-accountfee" src="image/text-accountfee.png" />
+ 		</div>
+
+ 		<div class="frame3">
+ 			<img class="text-enjoy" src="image/text-enjoy.png" />
+ 			<img class="party-horn1" src="image/party-cap.png" />
+ 			<img class="text-zero-monthly" src="image/text-zero-monthly.png" />
+ 		</div>
+		
+		<div class="frame4">
+ 			<img class="visa-card" src="image/visa-card.png" />
+ 			<img class="text-paybetter" src="image/text-paybetter.png" />
+ 			<img class="black-button" src="image/black-button.png" />
+ 			<img class="text-applyonline" src="image/text-applyonline.png" />
+ 			<img class="sunglasses-emoji2" src="image/sunglasses-emoji2.png" /> 
+ 		</div>
+	</div>
+
+</body>
+</html>
